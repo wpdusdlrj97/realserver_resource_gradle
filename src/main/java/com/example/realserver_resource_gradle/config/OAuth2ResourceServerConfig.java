@@ -24,10 +24,13 @@ import java.io.PrintWriter;
 @Configuration
 @EnableResourceServer
 public class OAuth2ResourceServerConfig extends ResourceServerConfigurerAdapter{
-	
+
+
 	/*
 	 * 리소스 서버 엔드포인트 보호를 위한 보안 룰 적용
+
 	 */
+
 	@Override
 	public void configure(HttpSecurity http) throws Exception {
 		// TODO Auto-generated method stub
@@ -38,6 +41,8 @@ public class OAuth2ResourceServerConfig extends ResourceServerConfigurerAdapter{
 			.requestMatchers().antMatchers("/**")
 		;
 	}
+
+
 	
 	/*
 	 * ResourceTokenService는 Resource Server가 액세스 토큰의 유효성을 검사하기 위해
